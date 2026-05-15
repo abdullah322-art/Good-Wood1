@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-arabic: "Cairo", "Tajawal", "Almarai", sans-serif;
+  --color-wood-900: #2C1810;
+  --color-wood-800: #3E2723;
+  --color-wood-700: #4E342E;
+  --color-wood-600: #5D4037;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #C5A028;
+  --color-gold-400: #F3E5AB;
+}
+
+@layer base {
+  body {
+    @apply font-arabic bg-[#0f0a08] text-gray-100 antialiased;
+    direction: rtl;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-black/40 backdrop-blur-md border border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-wood-900/60 backdrop-blur-sm border border-gold-500/20 shadow-xl shadow-black/50;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  }
+
+  .wood-gradient {
+    background: linear-gradient(135deg, #2C1810 0%, #1a0f0a 100%);
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f0a08;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A028;
+}
